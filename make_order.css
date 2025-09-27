@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  min-height: 100%;
+  background-color: #f5f5f5;
+}
+
+header {
+  margin: 40px 0 0 40px;
+}
+
+header nav ul {
+  padding: 20px 0 0;
+  display: flex;
+  gap: 50px;
+}
+
+header nav ul li {
+  font-weight: 500;
+  list-style-type: none;
+}
+
+header nav a {
+  font-size: 18px;
+  transition: 0.5s ease-in-out;
+  text-decoration: none;
+  color: #000;
+}
+header nav ul li a.active {
+  color: #ff6200;
+  font-weight: 600;
+  position: relative;
+}
+
+header nav ul li a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ff6200;
+  border-radius: 2px;
+}
+
+header nav ul li a:hover {
+  color: #ff6200;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  width: 100%;
+}
+
+main section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+main section .list {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+main section .list .card {
+  padding: 40px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  width: 380px;
+}
+
+main section .list .card:hover {
+  transform: translateY(-5px);
+}
+
+main section .list .card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 35px;
+  margin-bottom: 15px;
+}
+
+main section .list .card div {
+  margin: 0 0 15px 10px;
+  flex-grow: 1;
+}
+
+main section .list .card p:first-child {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+main section .list .card p:nth-child(2) {
+  font-size: 1.1rem;
+  margin: 10px 0;
+  color: #ff6200;
+}
+
+main section .list .card p:last-child {
+  color: #777;
+  font-size: 0.9rem;
+}
+
+main section .list .card button {
+  background-color: transparent;
+  color: #ff6200;
+  border: 1px solid #ff6200;
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+main section .list .card button:hover {
+  background-color: #ff6200;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+footer {
+  display: flex;
+  padding-left: 30px;
+  align-items: center;
+  height: 130px;
+  color: #fff;
+  background-color: #000;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Медиа-запросы */
+
+@media (max-width: 1260px) {
+  main section .list .card {
+    width: 350px;
+  }
+}
+
+@media (max-width: 1168px) {
+  main section .list .card {
+    width: 420px;
+  }
+}
+
+@media (max-width: 940px) {
+  main section .list .card {
+    width: 350px;
+  }
+}
+@media (max-width: 800px) {
+  header {
+    margin-left: 20px;
+    padding: 15px 0;
+  }
+
+  header nav ul {
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  header nav a {
+    font-size: 16px;
+  }
+
+  main section {
+    padding: 20px 30px;
+  }
+
+  main section h2 {
+    font-size: 1.8rem;
+  }
+
+  main section .list .card {
+    width: calc(50% - 30px);
+    min-width: 250px;
+    padding: 30px;
+    border-radius: 35px;
+  }
+  main section .list .card img {
+    border-radius: 25px;
+  }
+
+  main section .list .card p:nth-child(2) {
+    margin: 0;
+  }
+}
+
+@media (max-width: 580px) {
+  main section .list .card {
+    width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    margin-left: 15px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  header nav a {
+    font-size: 18px;
+  }
+
+  main section {
+    padding: 15px 20px;
+  }
+
+  main section h2 {
+    font-size: 1.6rem;
+  }
+
+  main section .list {
+    gap: 20px;
+  }
+
+  main section .list .card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 320px) {
+  header nav a {
+    font-size: 12px;
+  }
+
+  main section {
+    padding: 10px 15px;
+  }
+
+  main section h2 {
+    font-size: 1.4rem;
+  }
+
+  main section .list .card {
+    padding: 15px;
+  }
+
+  main section .list .card button {
+    padding: 10px 25px;
+  }
+}
